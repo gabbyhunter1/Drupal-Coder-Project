@@ -54,7 +54,7 @@
    ```sh
    git clone https://github.com/gabbyhunter1/Drupal-Coder-Project.git
    ```
-2. Install NPM packages
+2. Установим необходимые NPM пакеты:
    ```sh
    npm install
    ```
