@@ -44,24 +44,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-### Installation
-
-1. Скачиваем репозиторий:
-   ```sh
-   git clone https://github.com/gabbyhunter1/Drupal-Coder-Project.git
-   ```
-2. Установим необходимые NPM пакеты:
-   ```sh
-   npm install
-   ```
-   Если npm не установлен - https://nodejs.org/en/download/package-manager
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 
 ## Roadmap
