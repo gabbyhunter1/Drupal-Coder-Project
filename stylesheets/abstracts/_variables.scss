@@ -14,25 +14,21 @@ $text-font-stack: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, '
 
 
 
-/// Copy text color
+/// text color
 /// @type Color
-$text-color: rgba(#050C33, 0.5) !default;
+$text-color: #050C33 !default;
+
+/// Paragraph font size
+/// @type Length
+$paragraph-size: 16px;
+
+/// Section heading font size
+/// @type Length
+$section-heading-size: 42px;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
-
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
-
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$brand-color: rgb(241, 77, 52) !default;
 
 
 

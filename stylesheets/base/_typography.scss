@@ -1,9 +1,16 @@
 @use '../abstracts';
+@use './fonts';
 
-/**
- * Basic typography style for copy text
- */
 body {
   color: abstracts.$text-color;
-  font: normal 125% / 1.4 abstracts.$text-font-stack;
+  font-family: fonts.$main-font, #{abstracts.$text-font-stack};
+}
+
+.typography-body {
+  font-size: abstracts.$paragraph-size;
+  color: rgba(abstracts.$text-color, 0.7);
+}
+
+.section-heading {
+  font-size: abstracts.$section-heading-size;
 }

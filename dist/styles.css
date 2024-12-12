@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -228,12 +229,18 @@ summary {
   width: 1px;
 }
 
-/**
- * Basic typography style for copy text
- */
 body {
-  color: rgba(5, 12, 51, 0.5);
-  font: normal 125%/1.4 system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #050C33;
+  font-family: "Montserrat", system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.typography-body {
+  font-size: 16px;
+  color: rgba(5, 12, 51, 0.7);
+}
+
+.section-heading {
+  font-size: 42px;
 }
 
 /*# sourceMappingURL=styles.css.map */
