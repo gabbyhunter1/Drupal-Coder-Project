@@ -1,17 +1,24 @@
 @charset "UTF-8";
 
 // 1. Vendors
-@use 'vendors/normalize';
+@use "vendors/normalize";
 
 // 2. Base stuff
-@use 'base/base';
-@use 'base/fonts';
-@use 'base/helpers';
-@use 'base/typography';
+@use "base/base";
+@use "base/fonts";
+@use "base/helpers";
+@use "base/typography";
 
-// 3. Layout-related sections
-@use 'layout/footer';
-@use 'layout/header';
+// 3. Components
+@use "components/video-background";
+@use "components/navbar";
+@use "components/navbar-toggle";
+@use "components/navbar-list";
+@use "components/navbar-dropdown";
+@use "components/button";
 
-// 4. Components
-@use 'components/button';
+// 4. Layout-related sections
+@use "layout/footer";
+@use "layout/header";
+@use "layout/navbar-desktop.scss";
+@use "layout/hero";

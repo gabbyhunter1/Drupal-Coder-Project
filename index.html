@@ -5,86 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drupal Coder</title>
     <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="video-background">
-        <video src="./img/video.mp4" autoplay playsinline muted></video>
+        <video src="./img/video.mp4" autoplay loop playsinline muted></video>
       </div>
-      <nav class="navbar">
-        <div class="container">
-          <a href="# "><img src="./img/drupal-coder.svg" alt="Drupal Coder Logo" class="navbar__brand" /></a>
-          <ul class="navbar__list">
-            <li class="navbar__item"><a href="#" class="navbar__link">ПОДДЕРЖКА DRUPAL</a></li>
-            <li class="navbar__item">
-              АДМИНИСТРИРОВАНИЕ
-              <ul class="navbar__dropdown">
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">МИГРАЦИЯ</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">БЭКАПЫ</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">АУДИТ БЕЗОПАСНОСТИ</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">ПЕРЕЕЗД НА HTTPS</a></li>
-              </ul>
-            </li>
-            <li class="navbar__item"><a href="#" class="navbar__link">ПРОДВИЖЕНИЕ</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__link">РЕКЛАМА</a></li>
-            <li class="navbar__item">
-              О НАС
-              <ul class="navbar__dropdown">
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">КОМАНДА</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">DRUPALGIVE</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">БЛОГ</a></li>
-                <li class="navbar__dropdown__item"><a href="#" class="navbar__link">КУРСЫ DRUPAL</a></li>
-              </ul>
-            </li>
-            <li class="navbar__item"><a href="#" class="navbar__link">ПРОЕКТЫ</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__link">КОНТАКТЫ</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <section class="hero">
-        <div class="container">
+      <div class="container">
+        <nav class="navbar">
+          <div class="container">
+            <a href="#"><img src="./img/drupal-coder.svg" alt="Drupal Coder Logo" class="navbar__brand" /></a>
+            <button class="navbar__toggle" aria-label="Open Menu">
+              <span style="color: white; font-size: 1rem"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <ul class="navbar__list">
+              <li class="navbar__item"><a href="#" class="navbar__link">ПОДДЕРЖКА DRUPAL</a></li>
+              <li class="navbar__item">
+                <p class="navbar__item__heading">АДМИНИСТРИРОВАНИЕ</p>
+                <ul class="navbar__dropdown">
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">МИГРАЦИЯ</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">БЭКАПЫ</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">АУДИТ БЕЗОПАСНОСТИ</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">ПЕРЕЕЗД НА HTTPS</a></li>
+                </ul>
+              </li>
+              <li class="navbar__item"><a href="#" class="navbar__link">ПРОДВИЖЕНИЕ</a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link">РЕКЛАМА</a></li>
+              <li class="navbar__item">
+                <p class="navbar__item__heading">О НАС</p>
+                <ul class="navbar__dropdown">
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">КОМАНДА</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">DRUPALGIVE</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">БЛОГ</a></li>
+                  <li class="navbar__dropdown__item"><a href="#" class="navbar__dropdown__link">КУРСЫ DRUPAL</a></li>
+                </ul>
+              </li>
+              <li class="navbar__item"><a href="#" class="navbar__link">ПРОЕКТЫ</a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link">КОНТАКТЫ</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="hero">
           <div class="even-columns">
             <div class="hero__header">
-              <h1 class="hero__title">Поддержка сайтов на Drupal</h1>
-              <p class="typography-body">Сопровождение и поддержка сайтов на CMS Drupal любых версий и запущенности</p>
-              <button class="button">Тарифы</button>
+              <div class="hero__header-wrapper">
+                <h1 class="hero__title">Поддержка сайтов на Drupal</h1>
+                <p class="typography-body">Сопровождение и поддержка сайтов на CMS Drupal любых версий и запущенности</p>
+              </div>
+              <button class="button">ТАРИФЫ</button>
             </div>
             <div class="hero__achievements">
               <ul class="info-list">
                 <li class="info-list__item">
-                  <div class="hero__achievements-cupheader">
-                    <h2>#1</h2>
-                    <img src="./img/cup.png" alt="Cup" />
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__big-heading">#1</h2>
+                    <p class="hero__paragraph">Drupal-разработчик в России по версии Рейтинга Рунета</p>
                   </div>
-                  <p class="typography-body">Drupal-разработчик в России по версии Рейтинга Рунета</p>
                 </li>
                 <li class="info-list__item">
-                  <h2>3+</h2>
-                  <p class="typography-body">средний опыт специалистов более 3 лет</p>
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__heading">3+</h2>
+                    <p class="hero__paragraph">средний опыт специалистов более 3 лет</p>
+                  </div>
                 </li>
                 <li class="info-list__item">
-                  <h2>14</h2>
-                  <p class="typography-body">лет опыта в сфере Drupal</p>
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__heading">14</h2>
+                    <p class="hero__paragraph">лет опыта в сфере Drupal</p>
+                  </div>
                 </li>
                 <li class="info-list__item">
-                  <h2>50+</h2>
-                  <p class="typography-body">модулей и тем в формате DrupalGive</p>
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__heading">50+</h2>
+                    <p class="hero__paragraph">модулей и тем в формате DrupalGive</p>
+                  </div>
                 </li>
                 <li class="info-list__item">
-                  <h2>90 000+</h2>
-                  <p class="typography-body">часов поддержки сайтов на Drupal</p>
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__heading">90 000+</h2>
+                    <p class="hero__paragraph">часов поддержки сайтов на Drupal</p>
+                  </div>
                 </li>
                 <li class="info-list__item">
-                  <h2>300+</h2>
-                  <p class="typography-body">проектов на поддержке</p>
+                  <div class="info-list__item-wrapper">
+                    <h2 class="info-list__heading">300+</h2>
+                    <p class="hero__paragraph">проектов на поддержке</p>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </header>
 
     <section class="competencies-section">
@@ -197,30 +212,6 @@
             <img src="./img/support8.svg" alt="" width="84" height="84" />
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="expertise-section">
-      <h2 class="section-heading">Экспертиза в Drupal, опыт 14 лет!</h2>
-      <div class="expertise-section__wrapper">
-        <ul class="info-list">
-          <li class="info-list__item">
-            <p class="typography-body">Только системный подход - контроль версий, резервирование и тестирование!</p>
-          </li>
-          <li class="info-list__item">
-            <p class="typography-body">Только Drupal сайты, не берем на поддержку сайты на других CMS!</p>
-          </li>
-          <li class="info-list__item">
-            <p class="typography-body">Участвуем в разработке ядра Drupal и модулей на Drupal.org, разрабатываем свои модули Drupal</p>
-          </li>
-          <li class="info-list__item">
-            <p class="typography-body">Поддерживаем сайты на Drupal 5, 6, 7 и 8</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="expertise-section-wrapper">
-        <img src="./img/laptop.png" alt="" />
       </div>
     </section>
 

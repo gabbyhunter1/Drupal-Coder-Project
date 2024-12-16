@@ -1,0 +1,41 @@
+@use "../abstracts";
+@use "navbar-list";
+
+// .has-dropdown::after {
+//     content: ""; /* Unicode for Font Awesome caret-down */
+//     display: block;
+//     background-image: url("../../img/caret-down-solid.svg");
+//     width: 10px;
+//     height: 12px;
+// }
+
+.navbar {
+    &__dropdown {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        padding-left: 0px;
+
+        &.active {
+            display: block;
+            max-height: 500px;
+        }
+
+        &__item {
+            padding-left: 15px;
+            padding-block: 10px;
+            border-top: navbar-list.$navitems-mobile-border-color;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: #ffffff;
+            padding-left: 25px;
+
+            &:hover {
+                color: abstracts.$brand-color;
+            }
+        }
+    }
+}

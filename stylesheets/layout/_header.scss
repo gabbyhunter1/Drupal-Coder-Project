@@ -1,3 +1,33 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@use "../abstracts";
+
+.header {
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("../../img/background.svg") no-repeat;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    @media (max-width: map-get(abstracts.$breakpoints, "medium")) {
+        &::before {
+            background-size: contain;
+            background-position: center top;
+        }
+    }
+}

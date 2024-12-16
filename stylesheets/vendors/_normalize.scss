@@ -12,6 +12,8 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -24,10 +26,6 @@ html {
 Sections
 ========
 */
-
-body {
-	margin: 0; /* Remove the margin in all browsers. */
-}
 
 /*
 Text-level semantics
@@ -52,13 +50,7 @@ code,
 kbd,
 samp,
 pre {
-	font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace; /* 1 */
+	font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
 	font-size: 1em; /* 2 */
 }
 
@@ -129,9 +121,9 @@ Correct the inability to style clickable types in iOS and Safari.
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
 	-webkit-appearance: button;
 }
 
@@ -165,7 +157,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
 	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }

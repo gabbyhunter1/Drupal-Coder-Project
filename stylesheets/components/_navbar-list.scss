@@ -1,0 +1,63 @@
+@use "../abstracts";
+
+$navitems-mobile-border-color: 1px solid rgba(255, 255, 255, 0.2);
+
+.navbar {
+  &__list {
+    position: fixed;
+    bottom: 48.9px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+
+    &.active {
+      max-height: 80vh;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    padding-block: 10px;
+    padding-left: 15px;
+
+    border-bottom: $navitems-mobile-border-color;
+
+    &__heading {
+      margin: 0;
+      padding-left: 15px;
+      padding-bottom: 10px;
+
+      cursor: pointer;
+      &:hover {
+        color: abstracts.$brand-color;
+      }
+
+      &:after {
+        content: "";
+        background: url("../img/caret-down-solid.svg");
+        display: inline-block;
+      }
+    }
+
+    &.has-dropdown {
+      position: relative;
+      padding-left: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+
+    &:hover {
+      color: abstracts.$brand-color;
+    }
+  }
+}

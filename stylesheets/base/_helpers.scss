@@ -1,4 +1,4 @@
-@use '../abstracts';
+@use "../abstracts";
 
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
@@ -9,7 +9,7 @@
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -54,4 +54,16 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.even-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media (min-width: map-get(abstracts.$breakpoints, "large")) {
+  .even-columns {
+    flex-direction: row;
+    gap: 130px;
+  }
 }

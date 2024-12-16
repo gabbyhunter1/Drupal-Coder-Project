@@ -1,0 +1,77 @@
+@use "../abstracts";
+
+@media (min-width: map-get(abstracts.$breakpoints, "large")) {
+  .navbar {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+
+    .container {
+      max-width: none;
+      gap: 20px;
+      padding: 0px;
+      padding-top: 15px;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-height: none;
+      overflow: visible;
+      padding: 0;
+      background: none;
+      box-shadow: none;
+    }
+
+    &__item {
+      position: relative;
+      margin: 0 15px;
+      padding: 0px;
+      border-bottom: none;
+
+      &__heading {
+        padding: 0px;
+      }
+    }
+
+    &__link {
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #c43621;
+      }
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: abstracts.$brand-color;
+      padding: 10px 0;
+      z-index: 400;
+
+      &__item {
+        padding: 8px 15px;
+        border-bottom: none;
+        border: none;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: #c43621;
+        }
+      }
+
+      &__link {
+        padding: 0px;
+      }
+    }
+  }
+}

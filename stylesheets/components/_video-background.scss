@@ -1,0 +1,12 @@
+.video-background {
+    position: absolute;
+    z-index: -1;
+
+    video {
+        object-fit: fill;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    filter: blur(3px);
+}

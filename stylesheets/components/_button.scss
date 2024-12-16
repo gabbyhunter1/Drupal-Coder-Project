@@ -1,3 +1,20 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+@use "../abstracts";
+
+.button {
+    cursor: pointer;
+
+    width: 220px;
+    height: 60px;
+
+    font-size: 12px;
+
+    color: abstracts.$brand-color;
+    background-color: transparent;
+    border: 1px solid abstracts.$brand-color;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: abstracts.$brand-color;
+        color: #ffffff;
+    }
+}

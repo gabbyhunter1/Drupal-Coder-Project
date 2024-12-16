@@ -1,0 +1,112 @@
+@use "../abstracts";
+.hero {
+    --title-size: 52px;
+    margin-block: 40px;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        margin-block: 130px;
+    }
+
+    &__paragraph {
+        font-size: 12px;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 55px;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            align-items: initial;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        &__header {
+            text-align: initial;
+        }
+    }
+
+    &__title {
+        font-size: calc(var(--title-size) - 20px);
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+        &__title {
+            font-size: calc(var(--title-size) - 10px);
+        }
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        &__title {
+            font-size: var(--title-size);
+        }
+    }
+    &__achievements {
+        display: flex;
+        justify-content: center;
+
+        .info-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: baseline;
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+
+            &__big-heading {
+                font-size: 42px;
+            }
+
+            &__heading {
+                font-size: 24px;
+            }
+
+            &__item {
+                width: 160px;
+                padding-left: 10px;
+                position: relative;
+
+                &-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    left: 0;
+                    bottom: 0;
+                    height: 100%;
+                    background-color: red;
+                    margin-right: 20px;
+                }
+            }
+
+            @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+                &__item {
+                    width: 140px;
+                }
+            }
+        }
+
+        @media (min-width: calc(map-get(abstracts.$breakpoints, "medium") + 200px)) {
+            .info-list {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 100px;
+                align-items: flex-end;
+            }
+        }
+    }
+}
