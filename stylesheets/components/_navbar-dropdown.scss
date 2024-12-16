@@ -1,14 +1,6 @@
 @use "../abstracts";
 @use "navbar-list";
 
-// .has-dropdown::after {
-//     content: ""; /* Unicode for Font Awesome caret-down */
-//     display: block;
-//     background-image: url("../../img/caret-down-solid.svg");
-//     width: 10px;
-//     height: 12px;
-// }
-
 .navbar {
     &__dropdown {
         display: none;

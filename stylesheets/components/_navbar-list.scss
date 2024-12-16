@@ -37,12 +37,6 @@ $navitems-mobile-border-color: 1px solid rgba(255, 255, 255, 0.2);
       &:hover {
         color: abstracts.$brand-color;
       }
-
-      &:after {
-        content: "";
-        background: url("../img/caret-down-solid.svg");
-        display: inline-block;
-      }
     }
 
     &.has-dropdown {

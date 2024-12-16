@@ -353,11 +353,6 @@ body {
 .navbar__item__heading:hover {
   color: #f14d34;
 }
-.navbar__item__heading:after {
-  content: "";
-  background: url("../img/caret-down-solid.svg");
-  display: inline-block;
-}
 .navbar__item.has-dropdown {
   position: relative;
   padding-left: 0px;
@@ -500,6 +495,9 @@ body {
   .navbar__dropdown__link {
     padding: 0px;
   }
+  .navbar__dropdown__link:hover {
+    color: inherit;
+  }
 }
 .hero {
   --title-size: 52px;
@@ -560,7 +558,7 @@ body {
 .hero__achievements .info-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: baseline;
+  align-items: stretch;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
@@ -574,6 +572,8 @@ body {
   width: 160px;
   padding-left: 10px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .hero__achievements .info-list__item-wrapper {
   display: flex;
@@ -585,9 +585,8 @@ body {
   width: 3px;
   left: 0;
   bottom: 0;
-  height: 100%;
-  background-color: red;
-  margin-right: 20px;
+  height: 90%;
+  background-color: #f14d34;
 }
 @media (min-width: 1115px) {
   .hero__achievements .info-list__item {
@@ -599,7 +598,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 100px;
-    align-items: flex-end;
   }
 }
 

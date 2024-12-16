@@ -71,6 +71,10 @@
 
       &__link {
         padding: 0px;
+
+        &:hover {
+          color: inherit;
+        }
       }
     }
   }
