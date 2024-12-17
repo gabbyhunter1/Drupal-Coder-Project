@@ -11,25 +11,56 @@
 
     &__list {
         @include abstracts.grid-min-max-cols(2, 4, 150px, 20px, 15px);
+        justify-content: center;
 
         @media (min-width: map-get(abstracts.$breakpoints, "large")) {
             grid-row-gap: 60px;
+            justify-content: initial;
         }
 
         &__item {
             max-width: 185px;
+            display: flex;
+            flex-direction: column;
 
             .typography-body {
                 font-size: 14px;
-            }
-            @media (min-width: map-get(abstracts.$breakpoints, "large")) {
-                .typography-body {
+                @media (min-width: map-get(abstracts.$breakpoints, "large")) {
                     font-size: 16px;
                 }
             }
 
-            display: flex;
-            flex-direction: column;
+            &-image {
+                position: relative;
+            }
+
+            &-image::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: url("../img/background-icon.svg");
+                width: 115px;
+                height: 70px;
+                left: -54px;
+                bottom: -4px;
+            }
         }
+    }
+
+    &__item-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        align-items: center;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            text-align: initial;
+            align-items: initial;
+        }
+
+        // @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        //     grid-row-gap: 60px;
+        // }
     }
 }
