@@ -31,6 +31,10 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+
+            .typography-body {
+                color: #ffffff;
+            }
         }
     }
     @media (min-width: map-get(abstracts.$breakpoints, "large")) {

@@ -1,0 +1,35 @@
+@use "../abstracts";
+
+.competencies-section {
+    &__cards {
+        margin-top: 40px;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            margin-top: 60px;
+        }
+    }
+
+    &__list {
+        @include abstracts.grid-min-max-cols(2, 4, 150px, 20px, 15px);
+
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            grid-row-gap: 60px;
+        }
+
+        &__item {
+            max-width: 185px;
+
+            .typography-body {
+                font-size: 14px;
+            }
+            @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+                .typography-body {
+                    font-size: 16px;
+                }
+            }
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

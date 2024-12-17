@@ -1,0 +1,11 @@
+@use "../abstracts";
+@use "../base/base";
+.section {
+    padding-block: abstracts.$section-block-padding;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

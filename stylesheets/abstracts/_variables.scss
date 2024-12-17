@@ -40,3 +40,6 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
+
+$section-block-padding: 80px;
+$section-header-gap: 20px;

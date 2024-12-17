@@ -245,19 +245,28 @@ body {
   font-family: "Montserrat", system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
+p {
+  color: rgba(5, 12, 51, 0.7);
+}
+
 .typography-body {
   font-size: 16px;
 }
 
 .section-heading {
-  font-size: 42px;
+  font-size: 26px;
 }
-
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .section-heading {
     font-size: 32px;
   }
 }
+@media (min-width: 1115px) {
+  .section-heading {
+    font-size: 42px;
+  }
+}
+
 .video-background {
   position: absolute;
   z-index: -1;
@@ -406,6 +415,16 @@ body {
   color: #ffffff;
 }
 
+.section {
+  padding-block: 80px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .header {
   position: relative;
   overflow: hidden;
@@ -533,6 +552,9 @@ body {
   flex-direction: column;
   gap: 15px;
 }
+.hero__header-wrapper .typography-body {
+  color: #ffffff;
+}
 @media (min-width: 1115px) {
   .hero__header {
     text-align: initial;
@@ -598,6 +620,43 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 100px;
+  }
+}
+
+.competencies-section__cards {
+  margin-top: 40px;
+}
+@media (min-width: 1115px) {
+  .competencies-section__cards {
+    margin-top: 60px;
+  }
+}
+.competencies-section__list {
+  --min-cols: 2;
+  --max-cols: 4;
+  --cols-min-width: 150px;
+  --grid-row-gap: 20px;
+  --grid-column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, min(100% / var(--min-cols) - var(--grid-column-gap) * (var(--min-cols) - 1) / var(--min-cols), max(var(--cols-min-width), 100% / var(--max-cols) - var(--grid-column-gap) * (var(--max-cols) - 1) / var(--max-cols)))));
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+}
+@media (min-width: 1115px) {
+  .competencies-section__list {
+    grid-row-gap: 60px;
+  }
+}
+.competencies-section__list__item {
+  max-width: 185px;
+  display: flex;
+  flex-direction: column;
+}
+.competencies-section__list__item .typography-body {
+  font-size: 14px;
+}
+@media (min-width: 1115px) {
+  .competencies-section__list__item .typography-body {
+    font-size: 16px;
   }
 }
 

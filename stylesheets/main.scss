@@ -18,7 +18,9 @@
 @use "components/button";
 
 // 4. Layout-related sections
+@use "layout/section";
 @use "layout/footer";
 @use "layout/header";
 @use "layout/navbar-desktop.scss";
 @use "layout/hero";
+@use "layout/competencies-section";
