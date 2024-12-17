@@ -422,7 +422,15 @@ p {
 .section-header {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+}
+.section-header:has(p) {
   gap: 20px;
+}
+@media (min-width: 600px) {
+  .section-header {
+    margin-bottom: 60px;
+  }
 }
 
 .header {
@@ -623,14 +631,6 @@ p {
   }
 }
 
-.competencies-section__cards {
-  margin-top: 40px;
-}
-@media (min-width: 1115px) {
-  .competencies-section__cards {
-    margin-top: 60px;
-  }
-}
 .competencies-section__list {
   --min-cols: 2;
   --max-cols: 4;

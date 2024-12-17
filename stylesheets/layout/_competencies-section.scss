@@ -1,14 +1,6 @@
 @use "../abstracts";
 
 .competencies-section {
-    &__cards {
-        margin-top: 40px;
-
-        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
-            margin-top: 60px;
-        }
-    }
-
     &__list {
         @include abstracts.grid-min-max-cols(2, 4, 150px, 20px, 15px);
         justify-content: center;
