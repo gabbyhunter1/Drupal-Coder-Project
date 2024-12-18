@@ -372,6 +372,7 @@ p {
   margin: 0;
   padding-left: 15px;
   padding-bottom: 10px;
+  color: #ffffff;
   cursor: pointer;
 }
 .navbar__item__heading:hover {
