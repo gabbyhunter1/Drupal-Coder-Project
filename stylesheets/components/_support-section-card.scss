@@ -1,0 +1,39 @@
+@use "../abstracts";
+
+.support-section__cards {
+    @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+        @include abstracts.grid-min-max-cols(1, 4, 240px, 5px, 5px);
+    }
+    justify-content: center;
+
+    &__item {
+        position: relative;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        min-height: 300px;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+        }
+
+        &__order {
+            font-size: 12px;
+        }
+
+        &__title {
+            padding-top: 20px;
+            padding-bottom: 12px;
+        }
+
+        &__icon-wrapper {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            object-fit: contain;
+
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}

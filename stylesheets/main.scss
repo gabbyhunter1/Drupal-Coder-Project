@@ -10,12 +10,13 @@
 @use "base/typography";
 
 // 3. Components
+@use "components/button";
 @use "components/video-background";
 @use "components/navbar";
 @use "components/navbar-toggle";
 @use "components/navbar-list";
 @use "components/navbar-dropdown";
-@use "components/button";
+@use "components/support-section-card";
 
 // 4. Layout-related sections
 @use "layout/section";
@@ -24,3 +25,4 @@
 @use "layout/navbar-desktop.scss";
 @use "layout/hero";
 @use "layout/competencies-section";
+@use "layout/support-section";

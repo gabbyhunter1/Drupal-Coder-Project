@@ -192,7 +192,7 @@ li {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1180px; /* 1 */
+  max-width: 1300px; /* 1 */
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
   padding-left: 20px; /* 3 */
@@ -265,6 +265,21 @@ p {
   .section-heading {
     font-size: 42px;
   }
+}
+
+.button {
+  cursor: pointer;
+  width: 220px;
+  height: 60px;
+  font-size: 12px;
+  color: #f14d34;
+  background-color: transparent;
+  border: 1px solid #f14d34;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #f14d34;
+  color: #ffffff;
 }
 
 .video-background {
@@ -400,19 +415,43 @@ p {
   color: #f14d34;
 }
 
-.button {
-  cursor: pointer;
-  width: 220px;
-  height: 60px;
-  font-size: 12px;
-  color: #f14d34;
-  background-color: transparent;
-  border: 1px solid #f14d34;
-  border-radius: 5px;
+.support-section__cards {
+  justify-content: center;
 }
-.button:hover {
-  background-color: #f14d34;
-  color: #ffffff;
+@media (min-width: 600px) {
+  .support-section__cards {
+    --min-cols: 1;
+    --max-cols: 4;
+    --cols-min-width: 240px;
+    --grid-row-gap: 5px;
+    --grid-column-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(100% / var(--min-cols) - var(--grid-column-gap) * (var(--min-cols) - 1) / var(--min-cols), max(var(--cols-min-width), 100% / var(--max-cols) - var(--grid-column-gap) * (var(--max-cols) - 1) / var(--max-cols)))));
+    gap: var(--grid-row-gap) var(--grid-column-gap);
+  }
+}
+.support-section__cards__item {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  min-height: 300px;
+}
+.support-section__cards__item__order {
+  font-size: 12px;
+}
+.support-section__cards__item__title {
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+.support-section__cards__item__icon-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+}
+.support-section__cards__item__icon-wrapper img {
+  vertical-align: middle;
 }
 
 .section {
@@ -686,6 +725,10 @@ p {
     text-align: initial;
     align-items: initial;
   }
+}
+
+.support-section .section-header {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
