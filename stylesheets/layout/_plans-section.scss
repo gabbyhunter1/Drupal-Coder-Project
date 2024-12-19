@@ -1,0 +1,92 @@
+@use "../abstracts";
+
+.plans-section {
+    background: url("../img/background2.svg") no-repeat right top;
+    background-size: 50%;
+
+    margin-top: 100px;
+
+    .section-heading {
+        text-align: center;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        background-color: #fdfdfd;
+        border: 1px solid #f0f0f0;
+        border-radius: 10px;
+        padding: 30px 20px;
+        max-width: 350px;
+        flex: 1;
+
+        &__heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: abstracts.$brand-color;
+            margin-bottom: 20px;
+
+            text-align: left;
+        }
+    }
+    &__horizontal-rule {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin-bottom: 50px;
+    }
+
+    &__features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .tick {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+
+                color: abstracts.$brand-color;
+            }
+        }
+    }
+
+    &__note {
+        margin-top: 40px;
+        text-align: center;
+
+        &__paragraph {
+            margin-bottom: 10px;
+        }
+
+        &__link {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+                color: #d94400;
+            }
+        }
+    }
+}

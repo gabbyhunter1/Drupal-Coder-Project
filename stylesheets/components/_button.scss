@@ -17,4 +17,13 @@
         background-color: abstracts.$brand-color;
         color: #ffffff;
     }
+
+    &--inverted {
+        color: #ffffff;
+        background-color: abstracts.$brand-color;
+        &:hover {
+            background-color: #ffffff;
+            color: abstracts.$brand-color;
+        }
+    }
 }

@@ -285,6 +285,14 @@ p {
   background-color: #f14d34;
   color: #ffffff;
 }
+.button--inverted {
+  color: #ffffff;
+  background-color: #f14d34;
+}
+.button--inverted:hover {
+  background-color: #ffffff;
+  color: #f14d34;
+}
 
 .video-background {
   position: absolute;
@@ -867,6 +875,82 @@ p {
   left: 0;
   background: url("../img/background.svg") no-repeat right;
   background-size: contain;
+}
+
+.plans-section {
+  background: url("../img/background2.svg") no-repeat right top;
+  background-size: 50%;
+  margin-top: 100px;
+}
+.plans-section .section-heading {
+  text-align: center;
+}
+.plans-section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.plans-section__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+.plans-section__item {
+  background-color: #fdfdfd;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 30px 20px;
+  max-width: 350px;
+  flex: 1;
+}
+.plans-section__item__heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f14d34;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.plans-section__horizontal-rule {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 50px;
+}
+.plans-section__features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.plans-section__features-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.plans-section__features-list__item .tick {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  color: #f14d34;
+}
+.plans-section__note {
+  margin-top: 40px;
+  text-align: center;
+}
+.plans-section__note__paragraph {
+  margin-bottom: 10px;
+}
+.plans-section__note__link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.plans-section__note__link:hover {
+  color: #d94400;
 }
 
 /*# sourceMappingURL=styles.css.map */
