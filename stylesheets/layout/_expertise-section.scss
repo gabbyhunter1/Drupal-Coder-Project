@@ -1,0 +1,72 @@
+@use "../abstracts";
+
+.expertise-section {
+    background: linear-gradient(254.72deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+    color: #ffffff;
+    padding-top: 250px;
+    padding-bottom: 170px;
+
+    @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+        padding-top: 350px;
+    }
+
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        padding-top: 450px;
+    }
+
+    position: relative;
+    z-index: -1;
+
+    .info-list {
+        &__item__text {
+            font-size: 16px;
+        }
+    }
+
+    &__columns {
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-wrapper {
+        .info-list {
+            @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+                @include abstracts.grid-min-max-cols(2, 4, 280px, 30px, 20px);
+            }
+
+            &__item {
+                width: 280px;
+            }
+        }
+        padding-bottom: 100px;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+            padding-bottom: 200px;
+        }
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(17%);
+
+        img {
+            width: 300px;
+            @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+                width: 400px;
+            }
+            @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+                width: 640px;
+            }
+            @media (min-width: 1450px) {
+                width: 800px;
+            }
+        }
+    }
+}

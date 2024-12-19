@@ -1,0 +1,43 @@
+@use "../abstracts";
+
+.info-list {
+    display: grid;
+    align-items: stretch;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    color: #ffffff;
+
+    &__item {
+        &__heading {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 12px;
+            color: rgba($color: #ffffff, $alpha: 0.7);
+        }
+
+        width: 160px;
+        padding-left: 10px;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            left: 0;
+            bottom: 0;
+            height: 90%;
+            background-color: abstracts.$brand-color;
+        }
+    }
+}

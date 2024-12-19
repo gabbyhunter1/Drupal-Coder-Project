@@ -12,6 +12,7 @@
 // 3. Components
 @use "components/button";
 @use "components/video-background";
+@use "components/info-list";
 @use "components/navbar";
 @use "components/navbar-toggle";
 @use "components/navbar-list";
@@ -26,3 +27,4 @@
 @use "layout/hero";
 @use "layout/competencies-section";
 @use "layout/support-section";
+@use "layout/expertise-section";

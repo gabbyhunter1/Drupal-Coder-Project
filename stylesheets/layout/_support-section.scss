@@ -1,5 +1,15 @@
+@use "../abstracts";
+
 .support-section {
     .section-header {
         text-align: center;
+    }
+
+    &__cards {
+        @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+            @include abstracts.grid-min-max-cols(1, 4, 240px, 5px, 5px);
+        }
+
+        margin-bottom: -300px;
     }
 }
