@@ -1001,4 +1001,38 @@ p {
   bottom: -4px;
 }
 
+.team-section .section-heading {
+  text-align: center;
+}
+.team-section__member {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 15px;
+}
+.team-section__member img {
+  width: 100%;
+}
+.team-section__member__name {
+  font-weight: bold;
+}
+
+.wrap {
+  --min-cols: 2;
+  --max-cols: 3;
+  --cols-min-width: 150px;
+  --grid-row-gap: 20px;
+  --grid-column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, min(100% / var(--min-cols) - var(--grid-column-gap) * (var(--min-cols) - 1) / var(--min-cols), max(var(--cols-min-width), 100% / var(--max-cols) - var(--grid-column-gap) * (var(--max-cols) - 1) / var(--max-cols)))));
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .wrap {
+    grid-column-gap: 30px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
