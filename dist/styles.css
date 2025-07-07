@@ -1035,4 +1035,49 @@ p {
   }
 }
 
+.articles-section img {
+  width: 100%;
+}
+.articles-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: Three equal columns */
+  gap: 10px; /* Space between grid items */
+  margin: 10px;
+}
+@media (max-width: 800px) {
+  .articles-section__grid {
+    grid-template-columns: 1fr; /* One column layout */
+  }
+}
+.articles-section__article--bigger {
+  grid-column: 2/4;
+}
+@media (max-width: 800px) {
+  .articles-section__article {
+    grid-column: 1/-1;
+  }
+}
+
+.reviews-section {
+  background: url("../../img/quotation-mark.svg") no-repeat left top;
+  background-size: 20%;
+}
+.reviews-section .section-header {
+  text-align: center;
+}
+.reviews-section-wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+  box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 30px;
+}
+@media (min-width: 1115px) {
+  .reviews-section-wrapper {
+    padding: 80px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
